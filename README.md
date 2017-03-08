@@ -1,5 +1,5 @@
 # Call_RenderScript_from_NDK
-https://travis-ci.org/uelordi01/Call_RenderScript_from_NDK.svg?branch=master
+
 An android studio sample of hellocomputendk with gradle + cmake+ ndk
 
 The original sample code is in: 
