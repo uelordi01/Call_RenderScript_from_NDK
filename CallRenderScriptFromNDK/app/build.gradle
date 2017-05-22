@@ -15,6 +15,8 @@ android {
         renderscriptNdkModeEnabled true
         externalNativeBuild {
             cmake {
+                arguments '-DANDROID_PLATFORM=android-21',
+                        '-DANDROID_TOOLCHAIN=clang'
                 cppFlags "-std=c++11 -fno-rtti -fexceptions "
             }
         }

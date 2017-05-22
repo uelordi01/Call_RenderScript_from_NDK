@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         ImageView out = (ImageView) findViewById(R.id.displayout);
         out.setImageBitmap(mBitmapOut);
 
-        nativeMono(this.getCacheDir().toString(),
+        nativeRsMono(this.getCacheDir().toString(),
                 mBitmapIn.getWidth(), mBitmapIn.getHeight(),
                 mBitmapIn, mBitmapOut);
     }
@@ -45,5 +45,6 @@ public class MainActivity extends AppCompatActivity {
      * which is packaged with this application.
      */
     public native String stringFromJNI();
-    public native void  nativeMono(String cacheDir, int X, int Y, Bitmap in, Bitmap out);
+    public native void  nativeRsMono(String cacheDir, int X, int Y, Bitmap in, Bitmap out);
+    public native void  nativeNeonMono(String cacheDir, int X, int Y, Bitmap in, Bitmap out);
 }

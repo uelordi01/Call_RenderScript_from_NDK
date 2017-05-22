@@ -3,7 +3,8 @@
 # value of 3.4.0 or lower.
 
 cmake_minimum_required(VERSION 3.4.1)
-
+add_library(cpufeatures STATIC
+            ${ANDROID_NDK}/sources/android/cpufeatures/cpu-features.c)
 # Creates and names a library, sets it as either STATIC
 # or SHARED, and provides the relative paths to its source code.
 # You can define multiple libraries, and CMake builds it for you.
@@ -18,6 +19,8 @@ INCLUDE_DIRECTORIES(
     ${RENDER_SCRIPT_HEADERS_PATH}/scriptc
     ${RENDER_SCRIPT_HEADERS_PATH}
     src/main/cpp/ScriptC_mono.h
+    src/main/cpp
+     ${ANDROID_NDK}/sources/android/cpufeatures
     )
 
 link_directories( ${ANDROID_NDK}/toolchains/renderscript/prebuilt/${ANDROID_HOST_TAG}/platform/${ANDROID_SYSROOT_ABI})
@@ -68,6 +71,7 @@ MESSAGE(STATUS " -----------------------------------------------------")
 target_link_libraries( # Specifies the target library.
                        native-lib
                        RScpp_static
+                       cpufeatures
                        dl
                        jnigraphics
                        ${log-lib} )
