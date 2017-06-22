@@ -5,7 +5,7 @@
 #include "cpu-features.h"
 #include <RenderScript.h>
 #include "ScriptC_mono.h"
-bool isDeviceSupportNEON();
+bool isDeviceSupportByNEON();
 using namespace android::RSC;
 
 
