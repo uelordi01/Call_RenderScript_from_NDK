@@ -5,10 +5,9 @@
 #include "cpu-features.h"
 #include <RenderScript.h>
 #include "ScriptC_mono.h"
-bool isDeviceSupportNEON();
 using namespace android::RSC;
 
-
+bool isDeviceSupportByNEON();
 #define LOG_TAG "native-lib"
 extern "C"
 {

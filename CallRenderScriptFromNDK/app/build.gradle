@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "uelordi.android.hellocomputendk_rs"
         minSdkVersion 21
@@ -18,6 +18,7 @@ android {
                 arguments '-DANDROID_PLATFORM=android-21',
                         '-DANDROID_TOOLCHAIN=clang'
                 cppFlags "-std=c++11 -fno-rtti -fexceptions "
+                abiFilters  'armeabi-v7a' , 'arm64-v8a'
             }
         }
     }
